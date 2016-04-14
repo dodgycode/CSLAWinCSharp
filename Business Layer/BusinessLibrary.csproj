@@ -39,6 +39,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,11 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
+    <Compile Include="AddressEdit.cs" />
+    <Compile Include="PatientEdit.cs" />
+    <Compile Include="PatientList.cs" />
     <Compile Include="Shelved for now\Order.cs" />
     <Compile Include="Addresses.cs" />
     <Compile Include="Shelved for now\Orders.cs" />
-    <Compile Include="Patient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,28 +1,34 @@
 ﻿using Csla;
-using Csla.Rules;
-using Csla.Core;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Csla.Data;
 
 namespace Business_Layer
 {
     [Serializable]
-    public class Addresses : BusinessListBase<Addresses, Address>
+    public class Addresses : BusinessListBase<Addresses, AddressEdit>
     {
+     
         #region Factory methods
         internal static Addresses NewAddressList()
         {
-            return DataPortal.CreateChild<Addresses>();
-        }
-        internal static Address GetEditableChildList( object childData)
-        {
-            return DataPortal.FetchChild<Address>(childData);
+            return new Addresses();
         }
         #endregion
-               
-            }
+
+        #region Shared methods
+        public static Addresses GetAddresses(SafeDataReader reader)
+        {
+          Addresses  GetAddresses = new Addresses();
+         while (reader.Read())
+            {
+                GetAddresses.Add(AddressEdit.GetAddressEdit(reader));
+                             }
+
+            return GetAddresses;
+                   }
+        #endregion
+
+
     }
+}
 

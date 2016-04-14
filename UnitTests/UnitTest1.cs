@@ -1,8 +1,8 @@
 ﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Business_Layer;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
+using System.Configuration;
 
 namespace UnitTests
 {
@@ -10,8 +10,19 @@ namespace UnitTests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        //public void GetPatientList()
+        //{
+        //    List<PatientEdit> actualResult = new List<PatientEdit>();
+        //    PatientDAL pxClass = new PatientDAL();
+        //    actualResult = pxClass.GetPatientList();
+                
+        //    if (actualResult.Count == 0) { Assert.Fail(); };
+        //}
+
+        public void FetchPatient()
         {
+            PatientEdit actualResult = new PatientEdit();
+
         }
     }
 }
